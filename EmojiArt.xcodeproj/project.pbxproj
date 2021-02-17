@@ -14,6 +14,8 @@
 		4F11A13825DCB0620036783E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F11A13725DCB0620036783E /* Preview Assets.xcassets */; };
 		4F11A13B25DCB0620036783E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F11A13925DCB0620036783E /* LaunchScreen.storyboard */; };
 		4F11A14325DCB1180036783E /* EmojiArtDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F11A14225DCB1180036783E /* EmojiArtDocument.swift */; };
+		4F11A14525DD08520036783E /* EmojiArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F11A14425DD08520036783E /* EmojiArt.swift */; };
+		4F11A14725DD15910036783E /* EmojiArtExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F11A14625DD15910036783E /* EmojiArtExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4F11A13A25DCB0620036783E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F11A13C25DCB0620036783E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F11A14225DCB1180036783E /* EmojiArtDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocument.swift; sourceTree = "<group>"; };
+		4F11A14425DD08520036783E /* EmojiArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArt.swift; sourceTree = "<group>"; };
+		4F11A14625DD15910036783E /* EmojiArtExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiArtExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				4F11A13025DCB05E0036783E /* SceneDelegate.swift */,
 				4F11A13225DCB05E0036783E /* EmojiArtDocumentView.swift */,
 				4F11A14225DCB1180036783E /* EmojiArtDocument.swift */,
+				4F11A14625DD15910036783E /* EmojiArtExtensions.swift */,
+				4F11A14425DD08520036783E /* EmojiArt.swift */,
 				4F11A13425DCB0620036783E /* Assets.xcassets */,
 				4F11A13925DCB0620036783E /* LaunchScreen.storyboard */,
 				4F11A13C25DCB0620036783E /* Info.plist */,
@@ -151,6 +157,8 @@
 			files = (
 				4F11A12F25DCB05E0036783E /* AppDelegate.swift in Sources */,
 				4F11A13125DCB05E0036783E /* SceneDelegate.swift in Sources */,
+				4F11A14725DD15910036783E /* EmojiArtExtensions.swift in Sources */,
+				4F11A14525DD08520036783E /* EmojiArt.swift in Sources */,
 				4F11A13325DCB05E0036783E /* EmojiArtDocumentView.swift in Sources */,
 				4F11A14325DCB1180036783E /* EmojiArtDocument.swift in Sources */,
 			);
