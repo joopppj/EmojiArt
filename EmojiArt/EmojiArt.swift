@@ -4,15 +4,15 @@
 //
 //  Created by キラ on 2/17/21.
 //  Copyright © 2021 Kira. All rights reserved.
-//
+//  This is model
 
 import Foundation
 
-struct EmojiArt {
+struct EmojiArt: Codable{
     var backgroundURL: URL?
     var emojis = [Emoji]()
     
-    struct Emoji: Identifiable{
+    struct Emoji: Identifiable, Codable{
         let text: String
         var x: Int  // offset from centre
         var y: Int  // offset from centre
@@ -27,6 +27,20 @@ struct EmojiArt {
             self.id = id
         }
     }
+    
+    var json: Data? {
+        return try? JSONEncoder().encode(self)  // generate a json version of EmojiArt itself
+    }
+    
+    init?(json:Data?) {
+        if json != nil, let newEmojiArt = try? JSONDecoder().decode(EmojiArt.self, from: json!){
+            self = newEmojiArt
+        } else {
+            return nil
+        }
+    }
+    
+    init() {}
     
     private var uniqueEmojiId = 0
     
