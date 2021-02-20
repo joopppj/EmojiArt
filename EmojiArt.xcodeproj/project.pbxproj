@@ -17,6 +17,7 @@
 		4F11A14525DD08520036783E /* EmojiArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F11A14425DD08520036783E /* EmojiArt.swift */; };
 		4F11A14725DD15910036783E /* EmojiArtExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F11A14625DD15910036783E /* EmojiArtExtensions.swift */; };
 		4F11A14925DFCBFC0036783E /* OptionalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F11A14825DFCBFC0036783E /* OptionalImage.swift */; };
+		4F11A14B25DFE4A20036783E /* AnimatableSystemFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F11A14A25DFE4A20036783E /* AnimatableSystemFontModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4F11A14425DD08520036783E /* EmojiArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArt.swift; sourceTree = "<group>"; };
 		4F11A14625DD15910036783E /* EmojiArtExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiArtExtensions.swift; sourceTree = "<group>"; };
 		4F11A14825DFCBFC0036783E /* OptionalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalImage.swift; sourceTree = "<group>"; };
+		4F11A14A25DFE4A20036783E /* AnimatableSystemFontModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableSystemFontModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				4F11A13025DCB05E0036783E /* SceneDelegate.swift */,
 				4F11A13225DCB05E0036783E /* EmojiArtDocumentView.swift */,
 				4F11A14825DFCBFC0036783E /* OptionalImage.swift */,
+				4F11A14A25DFE4A20036783E /* AnimatableSystemFontModifier.swift */,
 				4F11A14225DCB1180036783E /* EmojiArtDocument.swift */,
 				4F11A14625DD15910036783E /* EmojiArtExtensions.swift */,
 				4F11A14425DD08520036783E /* EmojiArt.swift */,
@@ -164,6 +167,7 @@
 				4F11A14525DD08520036783E /* EmojiArt.swift in Sources */,
 				4F11A13325DCB05E0036783E /* EmojiArtDocumentView.swift in Sources */,
 				4F11A14925DFCBFC0036783E /* OptionalImage.swift in Sources */,
+				4F11A14B25DFE4A20036783E /* AnimatableSystemFontModifier.swift in Sources */,
 				4F11A14325DCB1180036783E /* EmojiArtDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
