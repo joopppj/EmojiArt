@@ -23,6 +23,7 @@ class EmojiArtDocument: ObservableObject {
         }
     }
     
+
     private static let untitled = "EmojiArtDocument.Untitled"
     
     init() {
@@ -53,9 +54,14 @@ class EmojiArtDocument: ObservableObject {
         }
     }
     
-    func setBackgroundURL (_ url: URL?) {
-        emojiArt.backgroundURL = url?.imageURL
-        fetchBackgroundImageData()
+    var backgroundURL : URL? {
+        get {
+            emojiArt.backgroundURL
+        }
+        set {
+            emojiArt.backgroundURL = newValue?.imageURL
+            fetchBackgroundImageData()
+        }
     }
     
     private func fetchBackgroundImageData() {

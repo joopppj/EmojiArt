@@ -52,7 +52,9 @@ struct EmojiArtDocumentView: View {
         }
     }
     
-    
+    var isLoading: Bool {
+        document.backgroundURL != nil  && document.backgroundImage == nil
+    }
     @State private var steadyStateZoomScale: CGFloat = 1.0
     @GestureState private var gestureZoomScale: CGFloat = 1.0// updating state
     
