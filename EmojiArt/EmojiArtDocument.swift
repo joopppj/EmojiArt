@@ -7,27 +7,24 @@
 // this is view model
 
 import SwiftUI
+import Combine
 
 class EmojiArtDocument: ObservableObject {
     
     static let palette: String = "🍏🍎🍐🍊🍋🍌"
     
-    //@Published
-    private var emojiArt: EmojiArt = EmojiArt() {
-        willSet{
-            objectWillChange.send()
-        }
-        didSet{
-            UserDefaults.standard.set(emojiArt.json, forKey: EmojiArtDocument.untitled)
-            print("json = \(emojiArt.json?.utf8 ?? "nil")")
-        }
-    }
+    @Published private var emojiArt: EmojiArt
     
 
     private static let untitled = "EmojiArtDocument.Untitled"
     
+    private var autosavecancellable: AnyCancellable?
     init() {
         emojiArt = EmojiArt(json: UserDefaults.standard.data(forKey: EmojiArtDocument.untitled)) ?? EmojiArt()
+        autosavecancellable = $emojiArt.sink{ emojiArt in
+            print("\(emojiArt.json?.utf8 ?? "nil")")
+            UserDefaults.standard.set(emojiArt.json, forKey: EmojiArtDocument.untitled)
+        }
         fetchBackgroundImageData()
     }
     
@@ -64,10 +61,11 @@ class EmojiArtDocument: ObservableObject {
         }
     }
     
+    private var fetchImageCancellable: AnyCancellable?
     private func fetchBackgroundImageData() {
         backgroundImage = nil
         if let url = self.emojiArt.backgroundURL {
-            DispatchQueue.global(qos: .userInitiated).async {
+            /*DispatchQueue.global(qos: .userInitiated).async {
                 if let imageData = try? Data(contentsOf: url) {
                     DispatchQueue.main.async {
                         if url == self.emojiArt.backgroundURL{
@@ -75,7 +73,16 @@ class EmojiArtDocument: ObservableObject {
                         }
                     }
                 }
-            }
+            }*/
+            fetchImageCancellable?.cancel()
+            fetchImageCancellable = URLSession.shared.dataTaskPublisher(for: url)
+                .map{data, urlResponse in
+                    UIImage(data: data)
+                }
+                .receive(on: DispatchQueue.main)
+                .replaceError(with: nil)
+                .assign(to: \.backgroundImage, on: self)
+            
         }
     }
 }
