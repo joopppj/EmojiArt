@@ -60,6 +60,9 @@ struct EmojiArtDocumentView: View {
                         location = CGPoint(x: location.x/self.zoomScale, y: location.y/self.zoomScale)
                         return self.drop(providers: providers, at: location)
                 }
+                .navigationBarItems(trailing: Button( action:{}, label: {
+                    Image(systemName: "doc.on.clipboard").imageScale(.large)
+                }))
             }
             
         }
